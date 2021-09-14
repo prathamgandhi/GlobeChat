@@ -3,6 +3,7 @@ package xyz.prathamgandhi.globechat;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,10 +19,10 @@ import java.util.concurrent.Executors;
 
 import io.socket.client.IO;
 import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
 
 public class NamePage extends AppCompatActivity {
     private JSONArray jarray;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,20 +32,14 @@ public class NamePage extends AppCompatActivity {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         URI uri = URI.create("http://192.168.29.140:5000");
         Socket socket = IO.socket(uri);
-        if (!socket.connected()) {
-            socket.connect();
-        }
-        socket.on("connect", args -> {
-            socket.emit("askUsers");
-            socket.on("allUsers", args1 -> {
-                try {
-                jarray = ((JSONObject) args1[0]).getJSONArray("users");
-                }
-                catch (JSONException e) {
+        socket.connect();
+        socket.emit("askUsers");
+        socket.on("allUsers", args -> {
+            try {
+                jarray = ((JSONObject) args[0]).getJSONArray("users");
+            } catch (JSONException e) {
                 e.printStackTrace();
-                }
-            });
-
+            }
         });
         submitButton.setOnClickListener(v -> {
             if (!socket.connected()) {
@@ -52,15 +47,6 @@ public class NamePage extends AppCompatActivity {
             }
             else {
                 socket.emit("askUsers");
-                socket.on("allUsers", args -> runOnUiThread(() -> {
-                    try {
-                        jarray = ((JSONObject) args[0]).getJSONArray("users");
-                    }
-                    catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-
-                }));
                 boolean flag = false;
                 String userName = personName.getText().toString().trim();
                 if(userName.length() == 0) {
