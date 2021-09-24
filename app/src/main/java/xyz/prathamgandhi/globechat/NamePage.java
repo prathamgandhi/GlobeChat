@@ -3,8 +3,6 @@ package xyz.prathamgandhi.globechat;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -14,26 +12,24 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.URI;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import io.socket.client.IO;
 import io.socket.client.Socket;
-import io.socket.emitter.Emitter;
 
 public class NamePage extends AppCompatActivity {
     private JSONArray jarray;
+    URI uri = URI.create("http://192.168.29.140:5000");
+    Socket socket = IO.socket(uri);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name_page);
         EditText personName = findViewById(R.id.personName);
         Button submitButton = findViewById(R.id.submitName);
-        ExecutorService executorService = Executors.newSingleThreadExecutor();
-        URI uri = URI.create("http://192.168.29.140:5000");
-        Socket socket = IO.socket(uri);
-        socket.connect();
-        socket.emit("askUsers");
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.globe_icon);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        System.out.println("Name Page created");
         socket.on("allUsers", args -> {
             try {
                 jarray = ((JSONObject) args[0]).getJSONArray("users");
@@ -73,10 +69,25 @@ public class NamePage extends AppCompatActivity {
                 if(!flag){
                     socket.disconnect();
                     Intent intent = new Intent(NamePage.this, MainActivity.class);
+                    intent.putExtra("userName", userName);
                     NamePage.this.startActivity(intent);
-                    NamePage.this.finish();
                 }
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        socket.connect();
+        socket.emit("askUsers");
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if(socket.connected()) {
+            socket.disconnect();
+        }
+        super.onDestroy();
     }
 }
