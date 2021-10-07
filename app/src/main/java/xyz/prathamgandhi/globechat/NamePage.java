@@ -18,7 +18,8 @@ import io.socket.client.Socket;
 
 public class NamePage extends AppCompatActivity {
     private JSONArray jarray;
-    URI uri = URI.create("http://192.168.29.140:5000");
+    URI uri = URI.create("https://global-chat001.herokuapp.com/");
+//    URI uri = URI.create("http://192.168.29.140:5000");
     Socket socket = IO.socket(uri);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,6 @@ public class NamePage extends AppCompatActivity {
         Button submitButton = findViewById(R.id.submitName);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.globe_icon);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         System.out.println("Name Page created");
         socket.on("allUsers", args -> {
             try {

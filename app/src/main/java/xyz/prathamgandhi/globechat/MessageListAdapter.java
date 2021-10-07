@@ -54,7 +54,9 @@ public class MessageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             case 1: {
                 ReceiveViewHolder receiveViewHolder = (ReceiveViewHolder) holder;
                 try {
-                    receiveViewHolder.textView.setText(items.get(position).getString("text"));
+                    receiveViewHolder.receiverName.setText(items.get(position).getString("user"));
+                    receiveViewHolder.receiverTime.setText(items.get(position).getString("time"));
+                    receiveViewHolder.receiverMessage.setText(items.get(position).getString("text"));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -63,8 +65,9 @@ public class MessageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             case 2 : {
                 SendViewHolder sendViewHolder = (SendViewHolder) holder;
                 try {
-                    sendViewHolder.textView.setText(items.get(position).getString("text"));
-                    //{"user":"Harsh","text":{"user":"Harsh","text":"Enter "},"time":"9:15 pm"}
+                    sendViewHolder.senderName.setText(items.get(position).getString("user"));
+                    sendViewHolder.senderTime.setText(items.get(position).getString("time"));
+                    sendViewHolder.senderMessage.setText(items.get(position).getString("text"));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -107,21 +110,25 @@ public class MessageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 }
 
 class ReceiveViewHolder extends RecyclerView.ViewHolder {
-    TextView textView;
+    TextView receiverName, receiverTime, receiverMessage;
     public ReceiveViewHolder(@NonNull View itemView) {
         super(itemView);
-        textView = itemView.findViewById(R.id.recmsgtext);
+        receiverName = itemView.findViewById(R.id.receiverName);
+        receiverTime = itemView.findViewById(R.id.receiverTime);
+        receiverMessage = itemView.findViewById(R.id.receiverMessage);
     }
 
 
 }
 
 class SendViewHolder extends RecyclerView.ViewHolder {
-    TextView textView;
+    TextView senderName, senderTime, senderMessage;
 
     public SendViewHolder(@NonNull View itemView) {
         super(itemView);
-        textView = itemView.findViewById(R.id.sendmsgtext);
+        senderName = itemView.findViewById(R.id.senderName);
+        senderTime = itemView.findViewById(R.id.senderTime);
+        senderMessage = itemView.findViewById(R.id.senderMessage);
     }
 
 }
