@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainConstraintLayout"
+    android:background="@color/background"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:weightSum="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="411dp"
+            android:layout_height="70dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/sendMsg"
+                        android:layout_width="350dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:background="@drawable/custom_edit_text_rounded"
+                        android:hint="@string/type_a_message"
+                        android:inputType="textCapSentences"
+                        android:padding="6dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/sendBtn"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_background"
+                        android:contentDescription="@string/todo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_send_out_of_focus" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

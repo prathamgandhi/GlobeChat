@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GlobeChat</string>
+    <string name="global_chat">Global Chat</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="todo">TODO</string>
+    <string-array name="customize_options">
+        <item>Body Color</item>
+        <item>Toolbar Color</item>
+    </string-array>
+</resources>
