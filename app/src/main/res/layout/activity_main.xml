@@ -18,20 +18,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:weightSum="1">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginBottom="15dp"/>
+            android:layout_weight="80" />
 
         <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="411dp"
-            android:layout_height="70dp"
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
             android:orientation="vertical">
 
             <TextView
@@ -48,50 +46,39 @@
                 android:textStyle="bold" />
 
             <LinearLayout
-                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:baselineAligned="false"
+                android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:layout_marginBottom="5dp">
+                android:weightSum="100">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                <EditText
+                    android:id="@+id/sendMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="100"
+                    android:autofillHints=""
+                    android:background="@drawable/custom_edit_text_rounded"
+                    android:hint="@string/type_a_message"
+                    android:inputType="textCapSentences"
+                    android:padding="6dp"
+                    android:textColor="@color/black" />
 
-                    <EditText
-                        android:id="@+id/sendMsg"
-                        android:layout_width="350dp"
-                        android:layout_height="44dp"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginLeft="4dp"
-                        android:background="@drawable/custom_edit_text_rounded"
-                        android:hint="@string/type_a_message"
-                        android:inputType="textCapSentences"
-                        android:padding="6dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageButton
-                        android:id="@+id/sendBtn"
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="4dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_background"
-                        android:contentDescription="@string/todo"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_baseline_send_out_of_focus" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
+                <ImageButton
+                    android:id="@+id/sendBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/button_background"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/ic_baseline_send_out_of_focus" />
             </LinearLayout>
+
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

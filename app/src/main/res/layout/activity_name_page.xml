@@ -6,13 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".SplashScreen"
     android:background="@color/gray_black">
-    android:screenOrientation="portrait" >
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome"
+        android:text="@string/welcome"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/personName"
@@ -23,11 +21,11 @@
 
     <EditText
         android:id="@+id/personName"
-        android:layout_width="369dp"
+        android:layout_width="300dp"
         android:layout_height="56dp"
         android:layout_marginBottom="336dp"
         android:ems="10"
-        android:hint="Enter your name here"
+        android:hint="@string/enter_your_name_here"
         android:inputType="textPersonName"
         android:textColor="@color/white"
         android:textColorHighlight="@color/white"
@@ -40,34 +38,35 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="352dp"
+        android:layout_width="340dp"
         android:layout_height="46dp"
-        android:text="Name should be less than 20 characters or less"
+        android:text="@string/name_should_be_less_than_20_characters_or_less"
         android:textColor="@android:color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/personName"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.031" />
 
     <ImageView
-        android:id="@+id/imageView4"
         android:layout_width="119dp"
         android:layout_height="124dp"
         app:layout_constraintBottom_toTopOf="@+id/personName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:srcCompat="@drawable/globe" />
+        app:srcCompat="@drawable/globe"
+        android:contentDescription="@string/todo" />
 
     <Button
         android:id="@+id/submitName"
         android:layout_width="147dp"
         android:layout_height="65dp"
-        android:text="Submit"
-        android:background="#5004fc"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_submit_button_rounded"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

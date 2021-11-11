@@ -39,7 +39,7 @@ public class NamePage extends AppCompatActivity {
         });
         submitButton.setOnClickListener(v -> {
             if (!socket.connected()) {
-                Toast.makeText(NamePage.this, "Please wait a second", Toast.LENGTH_SHORT).show();
+                Toast.makeText(NamePage.this, "The server seems offline right now :(", Toast.LENGTH_SHORT).show();
             }
             else {
                 socket.emit("askUsers");

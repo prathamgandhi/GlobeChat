@@ -8,11 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray_black">#28242c</color>
-    <color name="blue">#0d6efd</color>
     <color name="bars">#212528</color>
-    <color name="ColorPrimary">#FF5722</color>
-    <color name="ColorPrimaryDark">#E64A19</color>
     <color name="red">#dc3545</color>
     <color name="orange">#fd7e14</color>
     <color name="background">#212529</color>
+    <color name="skyblue">#2185d0</color>
 </resources>

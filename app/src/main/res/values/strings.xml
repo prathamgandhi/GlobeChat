@@ -3,6 +3,13 @@
     <string name="global_chat">Global Chat</string>
     <string name="type_a_message">Type a message</string>
     <string name="todo">TODO</string>
+    <string name="welcome">Welcome</string>
+    <string name="enter_your_name_here">Enter your name here</string>
+    <string name="name_should_be_less_than_20_characters_or_less">Name should be less than 20 characters or less</string>
+    <string name="submit">Submit</string>
+    <string name="customize">Customize</string>
+    <string name="meet_the_creator">Meet The Creator</string>
+    <string name="active_users">Active Users</string>
     <string-array name="customize_options">
         <item>Body Color</item>
         <item>Toolbar Color</item>

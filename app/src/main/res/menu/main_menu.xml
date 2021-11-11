@@ -6,16 +6,16 @@
     <item
         android:id="@+id/customize"
         android:orderInCategory="100"
-        android:title="Customize"
+        android:title="@string/customize"
         app:showAsAction = "never" />
     <item
         android:id="@+id/meet"
         android:orderInCategory="200"
-        android:title="Meet The Creator"
+        android:title="@string/meet_the_creator"
         app:showAsAction="never"/>
     <item
         android:id="@+id/active_user"
         android:orderInCategory="300"
-        android:title="Active Users"
+        android:title="@string/active_users"
         app:showAsAction="never" />
 </menu>
