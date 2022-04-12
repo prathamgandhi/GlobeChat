@@ -5,5 +5,7 @@ The chat application uses the socketio client library for java https://github.co
 It contains only the front-end for the chat application. The backed was created by https://github.com/Pramil01 at https://github.com/Pramil01/Globe-Chat/tree/master/server
 
 ## Screenshots of the working app : 
-# HomePage
-<img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/1.jpg" width="300" height="650.1">
+
+Home Page             |  Solarized Ocea
+:-------------------------:|:-------------------------:
+<img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/1.jpg" width="300" height="650.1">  |  <img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/2.jpg" width="300" height="650.1">
