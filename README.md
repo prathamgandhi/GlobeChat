@@ -6,6 +6,9 @@ It contains only the front-end for the chat application. The backed was created 
 
 ## Screenshots of the working app : 
 
-Home Page             |  Functional Chat               |  Additional Features      |  Huge Color Customization Options | Visible Color Changes
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------
-<img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/1.jpg" width="200" height="400">  |  <img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/2.jpg" width="200" height="400">  |  <img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/3.jpg" width="200" height="400"> | <img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/4.jpg" width="200" height="400"> | <img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/5.jpg" width="200" height="400">
+Home Page             |  Functional Chat               |  Additional Features     
+:-------------------------:|:-------------------------:|:-------------------------
+<img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/1.jpg" width="300" height="650.1">  |  <img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/2.jpg" width="300" height="650.1">  |  <img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/3.jpg" width="300" height="650.1"> 
+Huge Color Customization Options | Visible Color Changes
+:-------------------------:|:-------------------------
+| <img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/4.jpg" width="300" height="650.1"> | <img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/5.jpg" width="300" height="650.1">
