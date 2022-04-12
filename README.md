@@ -6,4 +6,4 @@ It contains only the front-end for the chat application. The backed was created 
 
 ## Screenshots of the working app : 
 # HomePage
-![Home Page](https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/1.jpg)
+<img src = "https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/1.jpg" width="100" height="216.7">
