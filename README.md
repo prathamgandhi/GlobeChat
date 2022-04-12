@@ -3,3 +3,7 @@ This is a native Java written Android chat app using sockets that connects to a 
 
 The chat application uses the socketio client library for java https://github.com/socketio/socket.io-client-java. 
 It contains only the front-end for the chat application. The backed was created by https://github.com/Pramil01 at https://github.com/Pramil01/Globe-Chat/tree/master/server
+
+## Screenshots of the working app : 
+# HomePage
+![Home Page](https://github.com/prathamgandhi/GlobeChat/blob/master/screenshots/1.jpg)
